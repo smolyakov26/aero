@@ -1,0 +1,29 @@
+[
+  {
+    "model": "api.slide",
+    "pk": 1,
+    "fields": {
+      "title": "Ощути свободу полета",
+      "text": "Прыжки с парашютом и обучение в Skybound Academy",
+      "bg": "slides/hero1.jpg"
+    }
+  },
+  {
+    "model": "api.slide",
+    "pk": 2,
+    "fields": {
+      "title": "Профессиональные инструкторы",
+      "text": "Обучение с лучшими специалистами авиации",
+      "bg": "slides/hero2.jpg"
+    }
+  },
+  {
+    "model": "api.slide",
+    "pk": 3,
+    "fields": {
+      "title": "Уникальные программы",
+      "text": "От тандем-прыжков до полного курса AFF",
+      "bg": "slides/hero3.jpg"
+    }
+  }
+]
