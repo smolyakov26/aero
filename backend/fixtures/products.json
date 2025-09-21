@@ -1,0 +1,68 @@
+[
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "product_type": "tandem_jump",
+      "title": "Тандем-прыжок с парашютом",
+      "subtitle": "Ваш первый шаг к небу",
+      "slug": "tandem-jump",
+      "short_description": "Безопасный первый прыжок с парашютом в компании опытного инструктора",
+      "description": "Тандем-прыжок с парашютом - это уникальная возможность ощутить свободу полёта и незабываемые эмоции.",
+      "category": "Skydiving",
+      "sort_order": 1,
+      "base_price": "15000.00",
+      "price": "15000.00",
+      "attributes": {
+        "video_price": 5000.00,
+        "photo_price": 3000.00
+      },
+      "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1350&q=80",
+      "video_url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      "is_active": true,
+      "is_featured": true,
+      "duration_hours": null,
+      "button_text": "Записаться на прыжок",
+      "button_link": "",
+      "meta_title": "Тандем-прыжок с парашютом — Skybound Academy",
+      "meta_description": "Тандем-прыжок с парашютом в Москве. Безопасный первый прыжок с инструктором. Видео и фото съёмка. Цены от 15 000 ₽.",
+      "keywords": "тандем прыжок, парашют, скайдайвинг, первый прыжок, skybound academy",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "product_type": "special_offer",
+      "title": "Скидка 30% на AFF курс",
+      "subtitle": "Станьте самостоятельным парашютистом",
+      "slug": "aff-course-discount",
+      "short_description": "Скидка 30% на курс AFF - путь к лицензии парашютиста",
+      "description": "Получите скидку 30% на полный курс Accelerated Freefall (AFF).",
+      "category": "Skydiving",
+      "sort_order": 2,
+      "base_price": "31500.00",
+      "price": "31500.00",
+      "attributes": {
+        "original_price": 45000.00,
+        "discount_percent": 30,
+        "levels_count": 7,
+        "total_jumps": 25
+      },
+      "image_url": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1350&q=80",
+      "video_url": "",
+      "is_active": true,
+      "is_featured": true,
+      "duration_hours": 40,
+      "button_text": "Записаться со скидкой",
+      "button_link": "",
+      "meta_title": "AFF курс со скидкой 30% — Skybound Academy",
+      "meta_description": "Курс Accelerated Freefall со скидкой 30%. Получите лицензию парашютиста за 7 уровней. Профессиональные инструкторы, современное оборудование.",
+      "keywords": "AFF курс, парашютная лицензия, скидка, обучение парашютному спорту, skybound academy",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

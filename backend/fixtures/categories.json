@@ -1,0 +1,42 @@
+[
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "Tandem Jump",
+      "slug": "tandem-jump"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "Special Offer",
+      "slug": "special-offer"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+      "name": "Course",
+      "slug": "course"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": {
+      "name": "Flight",
+      "slug": "flight"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 5,
+    "fields": {
+      "name": "Service",
+      "slug": "service"
+    }
+  }
+]
