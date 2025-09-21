@@ -1,8 +1,10 @@
-# api/urls.py
-from django.urls import path
-from .views import SlideViewSet, ProductViewSet
+# backend/api/urls.py
+from rest_framework.routers import DefaultRouter
+from .views import SlideViewSet, ProductViewSet, BookingViewSet
 
-urlpatterns = [
-    path('slides/', SlideViewSet.as_view({'get': 'list'}), name='slide-list'),
-    path('products/',ProductViewSet.as_view({'get': 'list'}), name='product-list')
-]
+router = DefaultRouter()
+router.register(r'slides', SlideViewSet, basename='slide')
+router.register(r'products', ProductViewSet, basename='product')
+router.register(r'bookings', BookingViewSet, basename='booking')
+
+urlpatterns = router.urls

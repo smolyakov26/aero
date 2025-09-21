@@ -67,3 +67,19 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+
+# backend/api/models.py (append)
+class Booking(models.Model):
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=50)
+    email = models.EmailField()
+    date = models.DateField(null=True, blank=True)
+    time = models.TimeField(null=True, blank=True)
+    comments = models.TextField(blank=True)
+    service = models.CharField(max_length=255, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.service} ({self.created_at:%Y-%m-%d})"
