@@ -14,6 +14,7 @@ interface ProgramProps {
   popular?: boolean;
   level: "beginner" | "intermediate" | "advanced";
   onBookingClick: (service: string) => void;
+  slug: string; // ⚡ добавил
 }
 
 function Program({
@@ -24,7 +25,8 @@ function Program({
   duration,
   popular,
   level,
-  onBookingClick
+  onBookingClick,
+  slug
 }: ProgramProps) {
   const levelIcons = {
     beginner: "lucide:circle",
@@ -37,9 +39,6 @@ function Program({
     intermediate: "Средний",
     advanced: "Продвинутый"
   };
-
-  // Create URL-friendly slug from title
-  const slug = title.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <Card 
@@ -57,7 +56,6 @@ function Program({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
-        {/* Fix the popular badge */}
         {popular && (
           <div className="absolute top-0 right-0 m-3">
             <div className="bg-primary text-white text-xs px-2 py-1 rounded-medium flex items-center">
@@ -67,7 +65,6 @@ function Program({
           </div>
         )}
         
-        {/* Fix the level badge */}
         <div className="absolute bottom-0 left-0 m-3">
           <div className="bg-white/90 text-default-700 text-xs px-2 py-1 rounded-medium flex items-center">
             <Icon icon={levelIcons[level]} className="mr-1" />
@@ -94,7 +91,7 @@ function Program({
             className="w-full text-sm sm:text-base"
             startContent={<Icon icon="lucide:info" />}
             as={RouterLink}
-            to={`/product/${slug}`}
+            to={`/product/${encodeURIComponent(slug)}`} // ⚡ безопасная ссылка
           >
             Подробнее
           </Button>
@@ -144,7 +141,6 @@ export function ProgramsSection({ onBookingClick }: ProgramsSectionProps) {
     fetchPrograms();
   }, []);
 
-  // If we have an error but programs were loaded from mock data, don't show the error
   const shouldShowError = error && programs.length === 0;
 
   return (
@@ -191,9 +187,10 @@ export function ProgramsSection({ onBookingClick }: ProgramsSectionProps) {
                   description={program.description}
                   price={program.price}
                   duration={program.duration}
-                  popular={index === 0} // You might want to add a 'popular' field to your API
+                  popular={index === 0}
                   level={program.level}
                   onBookingClick={onBookingClick}
+                  slug={program.slug} // ⚡ передаём slug из API
                 />
               </motion.div>
             ))}

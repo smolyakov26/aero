@@ -1,5 +1,5 @@
 // API base URL - adjust this to match your Django backend URL
-const API_BASE_URL = 'http://127.0.0.1:8000/api/';
+const API_BASE_URL = 'http://127.0.0.1:8000/api';
 
 // Generic fetch function with improved error handling
 async function fetchFromAPI<T>(endpoint: string, options?: RequestInit): Promise<T> {
